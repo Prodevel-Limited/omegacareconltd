@@ -1,0 +1,207 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { COMPANY, CONTACT, BUSINESS_HOURS } from '../constants';
+---
+
+<Layout 
+  title={`Contact Us - ${COMPANY.name}`}
+  description={`Get in touch with ${COMPANY.name}. We're here to discuss your care staffing requirements. Available 24/7 for urgent enquiries.`}
+>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-br from-brand-burgundy to-brand-dark text-white py-20 md:py-28">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Contact Us
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90">
+          We're here to help with your care staffing needs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Content Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-3xl font-bold text-brand-dark mb-6">
+            Get In Touch
+          </h2>
+          <p class="text-lg text-gray-600 mb-8">
+            Have a question or need urgent staffing support? Our team is available 24/7 to assist you. Fill out the form or use any of the contact methods below.
+          </p>
+
+          <!-- Contact Methods -->
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-burgundy/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-brand-dark mb-1">Phone</h3>
+                <a href={CONTACT.phone.href} class="text-gray-600 hover:text-brand-burgundy transition-colors">
+                  {CONTACT.phone.display}
+                </a>
+                <p class="text-sm text-brand-burgundy">Available 24/7 for emergencies</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-burgundy/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-brand-dark mb-1">Email</h3>
+                <a href={CONTACT.email.href} class="text-gray-600 hover:text-brand-burgundy transition-colors">
+                  {CONTACT.email.display}
+                </a>
+                <p class="text-sm text-brand-burgundy">We respond within 2 hours</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div class="flex-shrink-0 w-12 h-12 bg-brand-burgundy/10 rounded-full flex items-center justify-center">
+                <svg class="w-6 h-6 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-brand-dark mb-1">Address</h3>
+                <p class="text-gray-600">
+                  {COMPANY.name}<br />
+                  {CONTACT.address.street}<br />
+                  {CONTACT.address.city}, {CONTACT.address.postcode}<br />
+                  {CONTACT.address.country}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Business Hours -->
+          <div class="bg-brand-light p-6 rounded-xl">
+            <h3 class="font-semibold text-brand-dark mb-4 flex items-center">
+              <svg class="w-5 h-5 mr-2 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Business Hours
+            </h3>
+            <div class="space-y-2 text-gray-600">
+              <div class="flex justify-between">
+                <span>{BUSINESS_HOURS.weekdays.days}:</span>
+                <span class="font-medium">{BUSINESS_HOURS.weekdays.hours}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>{BUSINESS_HOURS.saturday.days}:</span>
+                <span class="font-medium">{BUSINESS_HOURS.saturday.hours}</span>
+              </div>
+              <div class="flex justify-between">
+                <span>{BUSINESS_HOURS.sunday.days}:</span>
+                <span class="font-medium">{BUSINESS_HOURS.sunday.hours}</span>
+              </div>
+              <div class="mt-4 pt-4 border-t border-gray-300">
+                <p class="text-sm text-brand-burgundy font-semibold">
+                  {BUSINESS_HOURS.emergency}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-brand-light p-8 rounded-xl">
+          <h2 class="text-2xl font-bold text-brand-dark mb-6">
+            Send Us a Message
+          </h2>
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map/Additional Info Section -->
+  <section class="py-16 md:py-24 bg-brand-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-brand-dark mb-6">
+          Why Choose {COMPANY.name}?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          We're committed to providing exceptional care staffing solutions with quick response times and professional service.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="w-14 h-14 bg-brand-burgundy/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-brand-dark mb-2">Rapid Response</h3>
+            <p class="text-gray-600 text-sm">
+              Emergency cover available within hours
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="w-14 h-14 bg-brand-burgundy/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-brand-dark mb-2">Fully Vetted</h3>
+            <p class="text-gray-600 text-sm">
+              All staff DBS checked and qualified
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg">
+            <div class="w-14 h-14 bg-brand-burgundy/10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-brand-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="font-bold text-brand-dark mb-2">24/7 Support</h3>
+            <p class="text-gray-600 text-sm">
+              Round-the-clock availability for your needs
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alternative Contact Methods -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-brand-dark mb-4">
+        Prefer to Speak Directly?
+      </h2>
+      <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        Our team is ready to discuss your specific requirements and answer any questions you may have.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href={CONTACT.phone.href} class="inline-flex items-center justify-center px-8 py-4 bg-brand-burgundy text-white font-semibold rounded-lg hover:bg-opacity-90 shadow-md hover:shadow-lg transition-all">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          Call Us Now
+        </a>
+        <a href={CONTACT.email.href} class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-brand-burgundy text-brand-burgundy font-semibold rounded-lg hover:bg-brand-burgundy hover:text-white transition-all shadow-md hover:shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          Email Us
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

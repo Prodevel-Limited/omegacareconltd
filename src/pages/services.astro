@@ -1,0 +1,290 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import Button from '../components/Button.astro';
+---
+
+<Layout 
+  title="Our Services - Omega Care Con Ltd"
+  description="Comprehensive care staffing solutions for residential care homes and hospitals across the UK. 24/7 availability and qualified professionals."
+>
+  <!-- Page Header -->
+  <section class="bg-gradient-to-br from-brand-burgundy to-brand-dark text-white py-20 md:py-28">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          Our Services
+        </h1>
+        <p class="text-xl md:text-2xl text-white/90">
+          Professional care staffing solutions tailored to your facility's needs
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Services Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+          What We Offer
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          From residential care homes to hospital staffing, we provide comprehensive solutions for all your care workforce needs.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ServiceCard
+          title="Residential Care Homes"
+          description="Experienced care professionals for residential facilities. Our staff are trained to provide compassionate, person-centered care to residents with varying needs."
+          icon="home"
+        />
+        
+        <ServiceCard
+          title="Hospital Staffing"
+          description="Qualified nurses, healthcare assistants, and support workers for hospitals and medical facilities. Available for short-term and long-term placements."
+          icon="heart"
+        />
+        
+        <ServiceCard
+          title="Dementia Care"
+          description="Specialized carers trained in dementia care techniques, providing patient, understanding support for individuals with cognitive challenges."
+          icon="users"
+        />
+
+        <ServiceCard
+          title="Palliative Care"
+          description="Compassionate end-of-life care professionals who ensure dignity, comfort, and support during the most sensitive times."
+          icon="heart"
+        />
+
+        <ServiceCard
+          title="24/7 Emergency Cover"
+          description="Round-the-clock availability for urgent staffing requirements. We understand that emergencies don't follow a schedule."
+          icon="clock"
+        />
+
+        <ServiceCard
+          title="Long-term Placements"
+          description="Stable, reliable staff for permanent or extended positions. Build continuity and trust with consistent care professionals."
+          icon="star"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="py-16 md:py-24 bg-brand-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+          How It Works
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Our streamlined process ensures you get the right staff when you need them.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-brand-burgundy text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            1
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Contact Us</h3>
+          <p class="text-gray-600">
+            Reach out via phone, email, or our contact form to discuss your staffing needs.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-brand-burgundy text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            2
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Requirements Review</h3>
+          <p class="text-gray-600">
+            We assess your specific requirements, including qualifications, experience, and availability.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-brand-burgundy text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            3
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Staff Matching</h3>
+          <p class="text-gray-600">
+            We select the most suitable professionals from our vetted pool of qualified carers.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-brand-burgundy text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-6 shadow-lg">
+            4
+          </div>
+          <h3 class="text-xl font-bold text-brand-dark mb-3">Placement & Support</h3>
+          <p class="text-gray-600">
+            Staff are placed at your facility with ongoing support from our dedicated team.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Features Section -->
+  <section class="py-16 md:py-24 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12 text-center">
+          What Sets Us Apart
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-2">Fully Vetted Professionals</h3>
+              <p class="text-gray-600">
+                Enhanced DBS checks, qualification verification, and reference checks for every staff member.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-2">Ongoing Training</h3>
+              <p class="text-gray-600">
+                Regular training updates on best practices, safeguarding, and compliance requirements.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-2">Flexible Scheduling</h3>
+              <p class="text-gray-600">
+                Day, night, weekend shifts, or full-time placements - we adapt to your schedule.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-2">Rapid Response</h3>
+              <p class="text-gray-600">
+                Emergency cover available within hours, not days. We're here when you need us most.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-2">Quality Assurance</h3>
+              <p class="text-gray-600">
+                Regular performance reviews and feedback mechanisms ensure consistent quality.
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start space-x-4">
+            <div class="flex-shrink-0">
+              <svg class="w-8 h-8 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-brand-dark mb-2">Dedicated Account Manager</h3>
+              <p class="text-gray-600">
+                A single point of contact who understands your facility and requirements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specializations Section -->
+  <section class="py-16 md:py-24 bg-brand-light">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">
+          Our Areas of Expertise
+        </h2>
+        <p class="text-lg text-gray-600 mb-12">
+          We specialize in providing staff for a wide range of care environments and specializations.
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Elderly Care</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Dementia Care</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Palliative Care</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Learning Disabilities</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Mental Health</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Physical Disabilities</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Complex Care</p>
+          </div>
+          <div class="bg-white p-4 rounded-lg shadow">
+            <p class="font-semibold text-brand-dark">Rehabilitation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-brand-burgundy to-brand-dark text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        Ready to Discuss Your Staffing Needs?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto text-white/90">
+        Our team is ready to help you find the perfect care professionals for your facility.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <Button href="/contact" size="lg" class="text-brand-burgundy hover:bg-gray-100">
+          Get in Touch
+        </Button>
+        <Button href="/about" variant="outline" size="lg" class="border-white text-white hover:bg-white hover:text-brand-burgundy">
+          Learn More About Us
+        </Button>
+      </div>
+    </div>
+  </section>
+</Layout>

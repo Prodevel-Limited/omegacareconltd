@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Custom brand colors */
+  --color-brand-burgundy: #B71C42;
+  --color-brand-dark: #1F2937;
+  --color-brand-light: #F3F4F6;
+
+  /* Custom font family */
+  --font-heading: 'Gilroy', system-ui, -apple-system, sans-serif;
+  --font-body: 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  --default-font-family: var(--font-body);
+}
+
+/* Custom global styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: #1F2937;
+  line-height: 1.6;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid #B71C42;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button,
+input,
+textarea,
+select {
+  transition: all 0.3s ease;
+}
+
+/* Enhanced body styles */
+body {
+  overflow-x: hidden;
+}
+
+/* Enhance hover effects */
+a:hover,
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Improved button focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #B71C42;
+  outline-offset: 3px;
+}
+
+/* Better form input styles */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #B71C42;
+  box-shadow: 0 0 0 3px rgba(183, 28, 66, 0.1);
+}
+
+/* Selection color */
+::selection {
+  background-color: #B71C42;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #B71C42;
+  color: white;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F4F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B71C42;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #951738;
+}
+
+/* Scroll animations for reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  [data-animate].in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
