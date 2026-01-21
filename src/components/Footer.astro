@@ -79,13 +79,26 @@ const currentYear = new Date().getFullYear();
     <!-- Bottom Bar -->
     <div class="border-t border-gray-700 mt-8 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div class="flex flex-col items-center md:items-start space-y-2">
+        <div class="flex flex-col items-center md:items-start space-y-3">
           <p class="text-gray-400 text-sm">
             &copy; {currentYear} {COMPANY.name}. All rights reserved.
           </p>
-          <p class="text-gray-500 text-xs">
-            Website developed by <a href="https://prodevel.co.uk/contact/?ref=omegacareconltd.co.uk" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-burgundy transition-colors">Prodevel Limited</a>
-          </p>
+          <a 
+            href="https://prodevel.co.uk/contact/?ref=omegacareconltd.co.uk" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="group inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-gray-800/50 hover:bg-gray-800 border border-gray-700 hover:border-brand-burgundy transition-all duration-300"
+          >
+            <svg class="w-4 h-4 text-brand-burgundy" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+            </svg>
+            <span class="text-xs text-gray-400 group-hover:text-white transition-colors">
+              Crafted with care by <span class="font-semibold text-gray-300 group-hover:text-brand-burgundy transition-colors">Prodevel</span>
+            </span>
+            <svg class="w-3 h-3 text-gray-600 group-hover:text-brand-burgundy group-hover:translate-x-0.5 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
         </div>
         <div class="flex items-center space-x-6">
           <a href="#" class="text-gray-400 hover:text-brand-burgundy transition-colors text-sm">
