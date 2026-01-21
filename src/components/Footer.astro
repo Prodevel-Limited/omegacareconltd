@@ -79,9 +79,14 @@ const currentYear = new Date().getFullYear();
     <!-- Bottom Bar -->
     <div class="border-t border-gray-700 mt-8 pt-8">
       <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <p class="text-gray-400 text-sm">
-          &copy; {currentYear} {COMPANY.name}. All rights reserved.
-        </p>
+        <div class="flex flex-col items-center md:items-start space-y-2">
+          <p class="text-gray-400 text-sm">
+            &copy; {currentYear} {COMPANY.name}. All rights reserved.
+          </p>
+          <p class="text-gray-500 text-xs">
+            Website developed by <a href="https://prodevel.co.uk/contact/?ref=omegacareconltd.co.uk" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-brand-burgundy transition-colors">Prodevel Limited</a>
+          </p>
+        </div>
         <div class="flex items-center space-x-6">
           <a href="#" class="text-gray-400 hover:text-brand-burgundy transition-colors text-sm">
             Privacy Policy
