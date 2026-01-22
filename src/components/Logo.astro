@@ -1,0 +1,88 @@
+---
+import { COMPANY } from '../constants';
+
+interface Props {
+  size?: 'sm' | 'md' | 'lg';
+  showText?: boolean;
+  class?: string;
+}
+
+const { 
+  size = 'md',
+  showText = true,
+  class: className = ''
+} = Astro.props;
+
+const sizeClasses = {
+  sm: 'w-10 h-10',
+  md: 'w-12 h-12',
+  lg: 'w-16 h-16',
+};
+
+const textSizeClasses = {
+  sm: 'text-xs',
+  md: 'text-sm',
+  lg: 'text-base',
+};
+---
+
+<div class={`flex items-center space-x-2 ${className}`}>
+  <!-- Logo SVG -->
+  <svg 
+    class={`${sizeClasses[size]} flex-shrink-0`}
+    viewBox="0 0 120 120"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label={`${COMPANY.name} logo`}
+    role="img"
+  >
+    <!-- Background Circle (white fill) -->
+    <circle cx="60" cy="60" r="58" fill="white"/>
+    
+    <!-- Outer Circle Border -->
+    <circle cx="60" cy="60" r="58" stroke="#B71C42" stroke-width="3" fill="none"/>
+    
+    <!-- Inner Circle Border -->
+    <circle cx="60" cy="60" r="48" stroke="#B71C42" stroke-width="2" fill="none"/>
+    
+    <!-- OCCL Text (Bold, Top) -->
+    <text 
+      x="60" 
+      y="48" 
+      font-family="Gilroy, system-ui, sans-serif" 
+      font-size="22" 
+      font-weight="800" 
+      fill="#B71C42" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      letter-spacing="-0.3"
+    >
+      OCCL
+    </text>
+    
+    <!-- Company Name Text (Smaller, Bottom) -->
+    <text 
+      x="60" 
+      y="78" 
+      font-family="Gilroy, system-ui, sans-serif" 
+      font-size="7" 
+      font-weight="600" 
+      fill="#B71C42" 
+      text-anchor="middle" 
+      dominant-baseline="middle"
+      letter-spacing="0.8"
+    >
+      OMEGA CARE CON LTD
+    </text>
+  </svg>
+
+  <!-- Text Label (optional) -->
+  {showText && (
+    <div class="hidden sm:block">
+      <span class={`block text-brand-burgundy font-bold ${textSizeClasses[size]} leading-tight`}>
+        {COMPANY.name}
+      </span>
+      <span class="block text-brand-dark text-xs">{COMPANY.tagline}</span>
+    </div>
+  )}
+</div>

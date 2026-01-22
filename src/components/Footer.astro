@@ -1,5 +1,6 @@
 ---
 import { COMPANY, CONTACT, NAV_ITEMS } from '../constants';
+import Logo from './Logo.astro';
 
 const currentYear = new Date().getFullYear();
 ---
@@ -9,12 +10,7 @@ const currentYear = new Date().getFullYear();
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
       <!-- Company Info -->
       <div class="space-y-4">
-        <div class="flex items-center space-x-2">
-          <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-burgundy text-white font-bold">
-            {COMPANY.shortName}
-          </div>
-          <span class="font-bold text-lg">{COMPANY.name}</span>
-        </div>
+        <Logo size="sm" showText={false} />
         <p class="text-gray-300 text-sm">
           {COMPANY.description}
         </p>
