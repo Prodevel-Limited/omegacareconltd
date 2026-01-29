@@ -1,5 +1,7 @@
 ---
 import { COMPANY } from '../constants';
+import LogoSvg from '../assets/images/logo_burgundy.svg';
+import { Image } from 'astro:assets';
 
 interface Props {
   size?: 'sm' | 'md' | 'lg';
@@ -26,73 +28,13 @@ const textSizeClasses = {
 };
 ---
 
-<div class={`flex items-center space-x-2 ${className}`}>
+<div class={`flex items-center justify-start ${className}`}>
   <!-- Logo SVG -->
-  <svg 
-    class={`${sizeClasses[size]} flex-shrink-0`}
-    viewBox="0 0 120 120"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-label={`${COMPANY.name} logo`}
-    role="img"
-    shape-rendering="geometricPrecision"
-  >
-    <defs>
-      <mask id="occl-cut" x="0" y="0" width="120" height="120" maskUnits="userSpaceOnUse">
-        <rect x="0" y="0" width="120" height="120" fill="white" />
-        <!-- Upper notches -->
-        <polygon points="41 42 48 46 41 50" fill="black" />
-        <polygon points="60 42 67 46 60 50" fill="black" />
-        <polygon points="79 42 86 46 79 50" fill="black" />
-        <!-- Lower notches -->
-        <polygon points="41 62 48 66 41 70" fill="black" />
-        <polygon points="60 62 67 66 60 70" fill="black" />
-        <polygon points="79 62 86 66 79 70" fill="black" />
-      </mask>
-    </defs>
-
-    <!-- Outer Circle Border -->
-    <circle cx="60" cy="60" r="58" stroke="#B71C42" stroke-width="3" fill="none"/>
-    
-    <!-- Inner Circle Border -->
-    <circle cx="60" cy="60" r="54" stroke="#B71C42" stroke-width="2" fill="none"/>
-    
-    <!-- OCCL Text (Bold, Top) -->
-    <text 
-      x="60" 
-      y="56" 
-      font-family="Gilroy, system-ui, sans-serif" 
-      font-size="42" 
-      font-weight="800" 
-      fill="#B71C42" 
-      text-anchor="middle" 
-      dominant-baseline="middle"
-      letter-spacing="-5"
-      lengthAdjust="spacingAndGlyphs"
-      mask="url(#occl-cut)"
-    >
-      OCCL
-    </text>
-    
-    <!-- Company Name Text (Smaller, Bottom) -->
-    <text 
-      x="60" 
-      y="84" 
-      font-family="Gilroy, system-ui, sans-serif" 
-      font-size="5.5" 
-      font-weight="300" 
-      fill="#B71C42" 
-      text-anchor="middle" 
-      dominant-baseline="middle"
-      lengthAdjust="spacingAndGlyphs"
-    >
-      OMEGA CARE CONSULTANCY LTD
-    </text>
-  </svg>
+  <Image src={LogoSvg} alt={COMPANY.name} width={50} height={50} />
 
   <!-- Text Label (optional) -->
   {showText && (
-    <div class="hidden sm:block">
+    <div class="hidden sm:block ml-2">
       <span class={`block text-brand-burgundy font-bold ${textSizeClasses[size]} leading-tight`}>
         {COMPANY.name}
       </span>
